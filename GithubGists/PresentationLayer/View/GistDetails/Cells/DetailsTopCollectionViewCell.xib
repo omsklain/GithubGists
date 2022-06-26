@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailsTopCollectionViewCell" id="gTV-IL-0wX" customClass="DetailsTopCollectionViewCell" customModule="GithubGists" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="454" height="301"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="454" height="301"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNS-zB-Mee">
+                        <rect key="frame" x="0.0" y="257" width="454" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3ZL-C2-8RE">
+                        <rect key="frame" x="113.5" y="10" width="227" height="227"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="3ZL-C2-8RE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="0Hr-rM-xuG"/>
+                <constraint firstAttribute="trailing" secondItem="VNS-zB-Mee" secondAttribute="trailing" id="4ys-WO-xXN"/>
+                <constraint firstAttribute="bottom" secondItem="VNS-zB-Mee" secondAttribute="bottom" constant="10" id="UEE-ba-33p"/>
+                <constraint firstItem="VNS-zB-Mee" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Weu-PJ-d45"/>
+                <constraint firstItem="3ZL-C2-8RE" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.5" id="hB3-BK-jik"/>
+                <constraint firstItem="3ZL-C2-8RE" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.5" id="wGc-Y3-7No"/>
+                <constraint firstItem="3ZL-C2-8RE" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="y9j-s5-FdJ"/>
+                <constraint firstItem="VNS-zB-Mee" firstAttribute="top" secondItem="3ZL-C2-8RE" secondAttribute="bottom" constant="20" id="zcU-4J-KGq"/>
+            </constraints>
+            <size key="customSize" width="454" height="301"/>
+            <connections>
+                <outlet property="userImage" destination="3ZL-C2-8RE" id="YV2-Zy-T0w"/>
+                <outlet property="userLogin" destination="VNS-zB-Mee" id="Vzp-21-QRG"/>
+            </connections>
+            <point key="canvasLocation" x="430.43478260869568" y="157.70089285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>
