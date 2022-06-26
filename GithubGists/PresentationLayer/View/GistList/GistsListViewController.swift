@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol GistsListViewControllerDelegate {
+protocol GistsListViewControllerDelegate: AnyObject {
     func presentDetails(model: Gist)
 }
 
 class GistsListViewController: UIViewController {
 
     let viewModel: ListViewModel
-    var delegate: GistsListViewControllerDelegate?
+    weak var delegate: GistsListViewControllerDelegate?
     
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
