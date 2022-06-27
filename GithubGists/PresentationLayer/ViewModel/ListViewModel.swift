@@ -26,7 +26,9 @@ class ListViewModel {
         client.getPublicGists(page: page, counts: 30) { [weak self] result in
             switch result {
                 case .failure(let error):
-                    if let error = error.errorDescription {
+                    if error.code == 403 {
+                        self?.errors.value = "Exceeded limit 60 requests per hour."
+                    } else if let error = error.errorDescription {
                         self?.errors.value = error
                     }
                 case .success(let data):

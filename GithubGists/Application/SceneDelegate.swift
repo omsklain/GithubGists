@@ -11,16 +11,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    private var router: RouterProtocol?
+    private var router: CoordinatorProtocol?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         
-        let gitHubClient: GitHubClientProtocol = GitHubClient()
         let navigationController = UINavigationController()
-        router = Router(navigationController: navigationController, client: gitHubClient)
+        
+        let gitHubClient: GitHubClientProtocol = GitHubClient()
+        let factory: FactoryProtocol = Factory(client: gitHubClient)
+        
+        router = Coordinator(navigationController: navigationController, factory: factory)
         router?.start()
+    
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
 

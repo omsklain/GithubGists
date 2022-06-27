@@ -64,12 +64,10 @@ class GistsListViewController: UIViewController {
     
     private func setupDynamicValues() {
         viewModel.items.bind { [weak self] items in
-            self?.refreshControl.endRefreshing()
-            
+            self?.endRefrreshing()
             if let lastCountItems = self?.tableView.numberOfRows(inSection: 0) {
                 if items.count > lastCountItems {
                     let indexPaths = (lastCountItems..<items.count).map { IndexPath(item: $0, section: 0) }
-                    //TODO: При добавлении останавливает прокрутку ...
                     self?.tableView.performBatchUpdates({
                         self?.tableView.insertRows(at: indexPaths, with: .none)
                     })
@@ -85,6 +83,14 @@ class GistsListViewController: UIViewController {
             self?.present(alert, animated: true, completion: { self?.refreshControl.endRefreshing() })
         }
         
+    }
+    
+    private func endRefrreshing() {
+        if self.refreshControl.isRefreshing {
+            DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
+            }
+        }
     }
     
     @objc private func refresh() {

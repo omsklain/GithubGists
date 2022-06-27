@@ -16,6 +16,7 @@ enum NetworkError: Error {
     
 }
 
+//MARK: - LocalizedError
 extension NetworkError: LocalizedError {
     
     var errorDescription: String? {
@@ -31,4 +32,20 @@ extension NetworkError: LocalizedError {
         }
     }
     
+}
+
+//MARK: - Errors code
+extension NetworkError {
+    var code: Int? {
+        switch self {
+        case .invalidURL:
+            return 0
+        case .URLRequestError(let error):
+            return (error as NSError).code
+        case .JSONDecoderError(let error):
+            return (error as NSError).code
+        case .HTTPURLResponseError(let code , _):
+            return code
+        }
+    }
 }

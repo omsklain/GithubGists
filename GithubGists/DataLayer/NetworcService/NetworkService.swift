@@ -21,8 +21,7 @@ extension NetworkService {
             if let error = error {
                 return completion(nil, .URLRequestError(error))
             }
-            /// Можно добавить доп обработку кодов ...
-            if let response = response as? HTTPURLResponse, !(200...200).contains(response.statusCode) {
+            if let response = response as? HTTPURLResponse, response.statusCode != 200 {
                 let discriptionCode = HTTPURLResponse.localizedString(forStatusCode: response.statusCode)
                 return completion(nil, .HTTPURLResponseError(statusCode: response.statusCode, description: discriptionCode))
             }

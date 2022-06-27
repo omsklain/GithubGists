@@ -39,7 +39,8 @@
 		196FA36A2867ACBD009CB689 /* DetailsHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196FA3682867ACBD009CB689 /* DetailsHeaderCollectionReusableView.swift */; };
 		196FA36B2867ACBD009CB689 /* DetailsHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 196FA3692867ACBD009CB689 /* DetailsHeaderCollectionReusableView.xib */; };
 		196FA36D28687809009CB689 /* UITextView+loadFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196FA36C28687809009CB689 /* UITextView+loadFromUrl.swift */; };
-		196FA36F28688BB6009CB689 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196FA36E28688BB6009CB689 /* Router.swift */; };
+		196FA36F28688BB6009CB689 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196FA36E28688BB6009CB689 /* Coordinator.swift */; };
+		196FA371286A2BE9009CB689 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196FA370286A2BE9009CB689 /* Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +78,8 @@
 		196FA3682867ACBD009CB689 /* DetailsHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		196FA3692867ACBD009CB689 /* DetailsHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		196FA36C28687809009CB689 /* UITextView+loadFromUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+loadFromUrl.swift"; sourceTree = "<group>"; };
-		196FA36E28688BB6009CB689 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		196FA36E28688BB6009CB689 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		196FA370286A2BE9009CB689 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +164,8 @@
 			children = (
 				193F8716286382C900AE48DA /* AppDelegate.swift */,
 				193F8718286382C900AE48DA /* SceneDelegate.swift */,
-				196FA36E28688BB6009CB689 /* Router.swift */,
+				196FA36E28688BB6009CB689 /* Coordinator.swift */,
+				196FA370286A2BE9009CB689 /* Factory.swift */,
 				193F8721286382DD00AE48DA /* LaunchScreen.storyboard */,
 				193F871F286382DD00AE48DA /* Assets.xcassets */,
 			);
@@ -316,6 +319,7 @@
 				193F875E2865F8F300AE48DA /* Gist.swift in Sources */,
 				193F871B286382C900AE48DA /* GistsListViewController.swift in Sources */,
 				193F87562864952D00AE48DA /* UITableViewCell+identifier.swift in Sources */,
+				196FA371286A2BE9009CB689 /* Factory.swift in Sources */,
 				193F873E286392F300AE48DA /* NetworkResource.swift in Sources */,
 				196FA352286748A5009CB689 /* DetailsTopCollectionViewCell.swift in Sources */,
 				193F87442863991800AE48DA /* GitHubResource.swift in Sources */,
@@ -323,7 +327,7 @@
 				196FA35F28677EC0009CB689 /* FileViewController.swift in Sources */,
 				193F87502864907400AE48DA /* ListTableViewCell.swift in Sources */,
 				196FA35A28674917009CB689 /* DetailsCommitCollectionViewCell.swift in Sources */,
-				196FA36F28688BB6009CB689 /* Router.swift in Sources */,
+				196FA36F28688BB6009CB689 /* Coordinator.swift in Sources */,
 				193F873C286390E700AE48DA /* HTTPMethod.swift in Sources */,
 				193F8736286387FE00AE48DA /* GitHubClient.swift in Sources */,
 				193F8717286382C900AE48DA /* AppDelegate.swift in Sources */,
